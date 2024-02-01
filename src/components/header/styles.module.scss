@@ -1,9 +1,47 @@
 .header {
-    position: absolute;
-    top:0;
-    left:0;
-    background: #686868;
-    width:500px;
-    padding:20px 0;
-    margin:0 170px;
+  position: absolute;
+  top: 0;
+  left: 178px;
+  right: 178px;
+  padding: 10px 0;
+  border-bottom:1px solid rgba(#fff, 0.25);
+}
+.navigation {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.menuLeft,
+.menuRight {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  width: 50%;
+  align-items: center;
+  column-gap: 50px;
+}
+.menuRight {
+  justify-content: flex-end;
+}
+.circle {
+  background: transparent;
+  border: 1px solid rgba(#fff, 0.1);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.circleOne {
+  width: 80px;
+  height: 80px;
+}
+.circleTwo {
+  width: 60px;
+  height: 60px;
+}
+.circleThird {
+  width: 40px;
+  height: 40px;
+  background: rgba(#fff, 0.15);
+  border: none;
 }
