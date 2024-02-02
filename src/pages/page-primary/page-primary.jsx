@@ -1,3 +1,4 @@
+import FeedbackForm from "../../components/feedback-form";
 import css from "./styles.module.scss";
 
 function PagePrimary() {
@@ -19,6 +20,7 @@ function PagePrimary() {
                         your personal
                     </h2>
                 </div>
+                <FeedbackForm />
             </div>
         </div>
     )
