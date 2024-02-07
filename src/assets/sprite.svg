@@ -35,8 +35,8 @@
 	</symbol>
 	<symbol id="arrowDiscuss" width="121" height="23" viewBox="0 0 121 23" fill="none">
 		<g>
-			<path d="M104 1L120 11.5L104 22" stroke="#FFAC30" />
-			<line x1="-4.37114e-08" y1="11.5" x2="100" y2="11.5" stroke="#FFAC30" />
+			<path d="M104 1L120 11.5L104 22"  />
+			<line x1="-4.37114e-08" y1="11.5" x2="100" y2="11.5"  />
 		</g>
 	</symbol>
 </svg>

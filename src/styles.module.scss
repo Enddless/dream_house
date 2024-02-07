@@ -1,6 +1,6 @@
 * {
-  margin:0;
-  padding:0;
+  margin: 0;
+  padding: 0;
   box-sizing: border-box;
 }
 
@@ -10,6 +10,7 @@ body {
   min-height: 100vh;
   font-family: "Roboto";
   color: white;
+  user-select: none;
 }
 a {
   text-decoration: none;
@@ -22,7 +23,7 @@ li {
 h1 {
   font-family: "Bruno Ace SC";
   line-height: 90px;
-  font-size:96px;
+  font-size: 96px;
 }
 h2 {
   font-size: 16px;

@@ -7,10 +7,14 @@
   position: absolute;
   right: 0;
   bottom: 0;
-  width: 650px;
-  height: 200px;
-  padding: 60px;
-  background: #ffffff;
+  width: 450px;
+  padding: 30px;
+  background: rgba(0,0,0, .35);
+  border-radius: 30px 0 0 0;
+  -webkit-border-radius: 30px 0 0 0;
+  -moz-border-radius: 30px 0 0 0;
+  -ms-border-radius: 30px 0 0 0;
+  -o-border-radius: 30px 0 0 0;
 }
 form {
   display: flex;
@@ -18,26 +22,32 @@ form {
   row-gap: 30px;
   input {
     border: none;
-    border-bottom: 1px solid rgba(0, 0, 0, 0.15);
+    background: inherit;
+    border-bottom: 1px solid rgba(255, 255, 255, .15);
     outline: none;
+    color: #ffac30;
   }
   .buttonContainer {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    column-gap:20px;
+    column-gap: 20px;
+    svg {
+      stroke: #ffac30;
+    }
   }
   .discuss {
     font-family: "Open Sans";
     width: 100%;
-    border:none;
-    background: white;
+    border: none;
+    background: transparent;
     color: #ffac30;
     text-transform: uppercase;
-    font-size:20px;
-    letter-spacing:10px;
+    font-size: 18px;
+    letter-spacing: 5px;
     cursor: pointer;
     text-align: left;
+    border-bottom: 1px solid transparent;
   }
   .discuss:hover {
     border-bottom: 1px solid #ffac30;

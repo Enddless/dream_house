@@ -12,7 +12,7 @@ function Header() {
                         </svg>
                     </li>
                     <li>
-                        <a href="tel:+380979877888">+38 (097) 987 78 88</a>
+                        <a href="tel:+74953555555">+7 (495) 355 55 55</a>
                     </li>
                 </ul>
                 <ul className={css.menuRight}>
