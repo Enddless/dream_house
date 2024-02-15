@@ -1,6 +1,6 @@
 .header {
   position: absolute;
-  z-index:10;
+  z-index: 10;
   top: 0;
   left: 178px;
   right: 178px;
@@ -22,14 +22,80 @@
   align-items: center;
   column-gap: 50px;
 }
+.link {
+  position: relative;
+  svg {
+    cursor: pointer;
+  }
+}
+.submenu {
+  position: absolute;
+  top: 30px;
+  width: 0px;
+  padding: 0;
+  background: rgba(0, 0, 0, 0.65);
+  border-radius: 0 0 30px 0;
+  font-family: 'Open Sans';
+  opacity: 0;
+  color: transparent;
+  font-size: 1px;
+  line-height: 1px;
+}
+.hoverEffect{
+  animation-name: hoverForm;
+  animation-duration: 400ms;
+  animation-timing-function: ease-in-out;
+  animation-fill-mode: forwards;
+}
+@keyframes hoverForm {
+  from {
+    opacity: 0;
+    width: 0px;
+    padding: 0;
+  }
+  to {
+    opacity: 1;
+    width: 226px;
+    padding: 30px;
+    color: inherit;
+    font-size: 16px;
+  line-height: 30px;
+  }
+}
+
+.unHovereffect {
+  animation-name: unhoverForm;
+  animation-duration: 400ms;
+  animation-timing-function: ease-in-out;
+  animation-fill-mode: forwards;
+}
+@keyframes unhoverForm {
+  from {
+    opacity: 1;
+    width: 226px;
+    padding: 30px;
+  }
+  to {
+    opacity: 0;
+    width: 0px;
+    padding: 0;
+  }
+}
+.linkItem {
+  cursor: pointer;
+}
+.linkItem:hover a{
+  color: #ffac30;
+  transition: color 500ms ease;
+}
 .menuRight {
   width: 60%;
   justify-content: flex-end;
-  font-family: "Open Sans";
-  color: #FFAC30;
+  font-family: 'Open Sans';
+  color: #ffac30;
   text-transform: uppercase;
-  letter-spacing:8px;
-  font-weight:500;
+  letter-spacing: 8px;
+  font-weight: 500;
 }
 .circle {
   background: transparent;
@@ -56,12 +122,8 @@
   background: rgba(#fff, 0.15);
   border: none;
 }
-.circleThird:hover{
+.circleThird:hover {
   width: 50px;
   height: 50px;
   transition: all 500ms ease-in-out;
-  -webkit-transition: all 500ms ease-in-out;
-  -moz-transition: all 500ms ease-in-out;
-  -ms-transition: all 500ms ease-in-out;
-  -o-transition: all 500ms ease-in-out;
 }

@@ -1,7 +1,7 @@
 .page {
   width: 100%;
   height: 100vh;
-  background: url("../../assets/images/fourth.png") no-repeat;
+  background: url('../../assets/images/fourth.png') no-repeat;
   background-size: cover;
   background-position: center;
   color: white;
@@ -13,86 +13,70 @@
 }
 .content {
   position: relative;
-  // left: 25%;
-  top: 30%;
-  width: 565px;
-  margin: 0 auto;
+  top: 50%;
+  transform: translate(0, -50%);
+  padding: 0 7%;
+  display: flex;
+  flex-direction: column;
 }
 .title {
   font-size: 20px;
   width: 50%;
   margin-bottom: 40px;
+  text-align: center;
+  text-transform: uppercase;
 }
 .data {
-  display: flex;
+  
+  display: grid;
   position: relative;
+  grid-template-columns: 200px 1fr 100px;
+  justify-items: center;
+  align-items: center;
+  column-gap: 70px;
 }
-.circle {
+.scrollBar {
   display: flex;
   align-items: center;
   justify-content: center;
-  position: absolute;
-  top: 186px;
-  right: -15px;
-  width: 100px;
-  height: 100px;
-  border:1px solid #FFAC30;
+  position: relative;
+  /* top: 186px; */
+  /* right: -15px; */
+  width: 200px;
+  height: 200px;
+  box-shadow: inset 0 0 0 1px rgb(104, 104, 104);
   border-radius: 50%;
+  /* margin-right: 70px; */
+  grid-column: 1 / 2;
 }
-.circle > div {
+.circle {
   width: 100%;
   height: 100%;
   position: absolute;
   border-radius: 50%;
+  mask-image: radial-gradient(circle at center, transparent 69%, red 50%);
 }
-.outer {
-  background-color: gray;
-  clip-path: polygon(50% 0%, 100% 0, 100% 100%, 0 100%, 0 100%, 0 0, 50% 0, 50% 50%, 50% 50%);
+.topCircle {
+  width: 95%;
+  height: 95%;
+  border-radius: 50%;
+  background: transparent;
+  z-index: 5;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Bruno Ace SC';
+  font-size:64px;
+  line-height:70px;
 }
-
-.inner {
-  transform: scale(0.95);
-  background-color: transparent;
-}
-
-.circle:hover .outer {
-  animation: xxx 2s linear forwards;
-}
-
-@keyframes xxx {
-  12.5% {
-    clip-path: polygon(50% 0%, 100% 0, 100% 100%, 0 100%, 0 100%, 0 0, 0 0, 50% 50%, 50% 50%);
-  }
-  25% {
-    clip-path: polygon(50% 0%, 100% 0, 100% 100%, 0 100%, 0 100%, 0 50%, 0 50%, 50% 50%, 50% 50%);
-  }
-  37.5% {
-    clip-path: polygon(50% 0%, 100% 0, 100% 100%, 0 100%, 0 100%, 0 100%, 0 100%, 50% 50%, 50% 50%);
-  }
-  50% {
-    clip-path: polygon(50% 0%, 100% 0, 100% 100%, 50% 100%, 50% 100%, 50% 100%, 50% 100%, 50% 50%, 50% 50%);
-  }
-  62.5% {
-    clip-path: polygon(50% 0%, 100% 0, 100% 100%, 100% 100%, 100% 100%, 100% 100%, 100% 100%, 50% 50%, 50% 50%);
-  }
-  75% {
-    clip-path: polygon(50% 0%, 100% 0, 100% 50%, 100% 50%, 100% 50%, 100% 50%, 100% 50%, 50% 50%, 50% 50%);
-  }
-  87.5% {
-    clip-path: polygon(50% 0%, 100% 0, 100% 0, 100% 0, 100% 0, 100% 0, 100% 0, 50% 50%, 50% 50%);
-  }
-  100% {
-    clip-path: polygon(50% 0%, 50% 0, 50% 0, 50% 0, 50% 0, 50% 0, 50% 0, 50% 50%, 50% 50%);
-  }
-}
-
-
-
-
 
 .steps {
   display: flex;
-  width: 600px;
+  /* width: 100%; */
+  width: 80%;
+  position: relative;
+  grid-column: 2 / 3;
+  align-items: center;
 }
 .card {
   display: none;
@@ -100,14 +84,27 @@
 .activeCard {
   display: flex;
   align-items: center;
+  column-gap: 41px;
   .name {
     font-size: 36px;
-    font-family: "Open Sans";
-    width: 260px;
+    font-family: 'Open Sans';
+    width: 290px;
   }
   .text {
     font-size: 18px;
-    width: 200px;
+    width: 290px;
     line-height: 30px;
   }
+}
+.transition {
+  // position: absolute;
+  // top:50%;
+  // right:10%;
+  // top: 50%;
+  // transform: translate(-10%, -50%);
+  grid-column: 3 / 4;
+
+}
+.next {
+  cursor:pointer;
 }

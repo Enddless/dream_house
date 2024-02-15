@@ -12,7 +12,6 @@
   top: 50%;
   transform: translate(0, -50%);
   z-index: 100;
-  width: 50px;
   display: flex;
   flex-direction: column;
   row-gap: 25px;
@@ -20,19 +19,49 @@
   justify-content: center;
 }
 .dot {
+  cursor: pointer;
+  display: block;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  border: 0;
   width: 7px;
   height: 7px;
-  border-radius: 50%;
   background-color: rgba(255, 255, 255, 0.4);
+  border-radius: 100%;
+  padding: 0;
   cursor: pointer;
+  position: relative;
+  // opacity: 0.2;
+  transition: opacity 0.2s ease-in-out;
+  outline: none;
+
+}
+.dot.active {
+  background-color:#ffac30;
+}
+.dot:before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  height: 100%;
+  border-radius: 100%;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  opacity: 0;
+  transition: opacity 0.4s ease-in-out, width 0.4s ease-in-out, height 0.4s ease-in-out;
 }
 
 .active {
-  width: 11px;
-  height: 11px;
-  border-radius: 100%;
-  background-color: #ffac30;
-  box-shadow: inset 0px 0px 0px 0px transparent, 0 0 0 8px rgba(255, 255, 255, 0.3);
+  opacity: 1;
+}
+.active:before {
+  width: 330%;
+  height: 330%;
+  opacity: 1;
 }
 
 .page {

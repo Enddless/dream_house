@@ -1,8 +1,10 @@
-import src from "../../assets/images/logo.svg"
+import src from "../../assets/images/logo.svg";
+import { Link } from "react-router-dom";
 
 function Logo() {
     return (
-        <img src={src} alt="logotype"/>    )
+        <Link to="/"><img src={src} alt="logotype" style={{ cursor: "pointer" }} />   </Link>)
 }
+
 
 export default Logo

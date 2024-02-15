@@ -19,6 +19,7 @@ function PagePrimary() {
                     <h2 className={css.subtitle}>
                         your personal
                     </h2>
+
                 </div>
                 <FeedbackForm />
             </div>

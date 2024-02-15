@@ -4,7 +4,7 @@
   left: 65px;
   bottom: 54px;
   width: 50px;
-  z-index:10;
+  z-index: 10;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -24,10 +24,15 @@
   width: 1px;
   height: 10%;
   background: rgba(255, 255, 255, 0.25);
-  margin:10px 0;
+  margin: 10px 0;
 }
 .social {
   display: flex;
   flex-direction: column;
   row-gap: 20px;
+}
+.link:hover {
+  cursor: pointer;
+  stroke: #ffac30;
+  fill: #ffac30;
 }
