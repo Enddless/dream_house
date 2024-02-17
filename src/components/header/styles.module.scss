@@ -41,7 +41,7 @@
   font-size: 1px;
   line-height: 1px;
 }
-.hoverEffect{
+.hoverEffect {
   animation-name: hoverForm;
   animation-duration: 400ms;
   animation-timing-function: ease-in-out;
@@ -59,7 +59,7 @@
     padding: 30px;
     color: inherit;
     font-size: 16px;
-  line-height: 30px;
+    line-height: 30px;
   }
 }
 
@@ -84,7 +84,7 @@
 .linkItem {
   cursor: pointer;
 }
-.linkItem:hover a{
+.linkItem:hover a {
   color: #ffac30;
   transition: color 500ms ease;
 }

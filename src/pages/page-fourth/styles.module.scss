@@ -27,7 +27,6 @@
   text-transform: uppercase;
 }
 .data {
-  
   display: grid;
   position: relative;
   grid-template-columns: 200px 1fr 100px;
@@ -66,8 +65,8 @@
   align-items: center;
   justify-content: center;
   font-family: 'Bruno Ace SC';
-  font-size:64px;
-  line-height:70px;
+  font-size: 64px;
+  line-height: 70px;
 }
 
 .steps {
@@ -103,8 +102,7 @@
   // top: 50%;
   // transform: translate(-10%, -50%);
   grid-column: 3 / 4;
-
 }
 .next {
-  cursor:pointer;
+  cursor: pointer;
 }
