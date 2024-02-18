@@ -1,4 +1,3 @@
-import css from './styles.module.scss';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 import Slider from 'react-slick';
@@ -16,10 +15,10 @@ const settings = {
 
 function SliderGalerry({ data }) {
   return (
-    <Slider {...settings} className={css.slider}>
+    <Slider {...settings}>
       {data.map((card) => {
         return (
-          <div className={css.card} key={card.id}>
+          <div key={card.id}>
             <img src={card.path} alt={card.name} />
           </div>
         );

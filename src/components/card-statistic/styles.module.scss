@@ -1,3 +1,5 @@
+@import '../../styles.module.scss';
+
 .card {
   grid-column: span 4;
   border-left: 1px solid #ffffff;
@@ -11,7 +13,7 @@
   .value {
     font-size: calc(var(--index) * 2.03); //64px;
     line-height: calc(var(--index) * 2.04); //70px;
-    font-family: 'Bruno Ace SC';
+    font-family: $font-family-secondary;
     margin-bottom: 18px;
   }
   .text {
