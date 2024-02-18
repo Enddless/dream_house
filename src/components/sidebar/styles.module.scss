@@ -13,7 +13,7 @@
 .text {
   text-transform: uppercase;
   letter-spacing: 7px;
-  font-size: 12px;
+  font-size: calc(var(--index) * 0.4); //12px;
   color: rgba(255, 255, 255, 0.5);
   writing-mode: vertical-rl;
   -webkit-writing-mode: vertical-rl;
@@ -22,7 +22,7 @@
 }
 .decoration {
   width: 1px;
-  height: 10%;
+  height: calc(var(--index) * 5); //10%;
   background: rgba(255, 255, 255, 0.25);
   margin: 10px 0;
 }
@@ -35,4 +35,10 @@
   cursor: pointer;
   stroke: #ffac30;
   fill: #ffac30;
+}
+
+@media screen and (max-width: 700px) {
+  .sidebar {
+    display: none;
+  }
 }

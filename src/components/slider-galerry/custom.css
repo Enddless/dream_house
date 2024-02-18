@@ -64,3 +64,9 @@
   border: 2px solid rgba(255, 255, 255, 0.2);
   opacity: 1;
 }
+
+@media screen and (max-width: 500px) {
+  .slick-dots {
+    bottom: -90px;
+  }
+}

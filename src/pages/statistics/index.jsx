@@ -4,7 +4,7 @@ import { statisticData } from './data';
 import sprite from '../../assets/sprite.svg';
 import CardStatistic from '../../components/card-statistic';
 
-function PageSecondary() {
+function StatisticsPage() {
   return (
     <div className={css.page}>
       <div className={css.overlay}>
@@ -29,4 +29,4 @@ function PageSecondary() {
   );
 }
 
-export default PageSecondary;
+export default StatisticsPage;

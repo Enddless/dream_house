@@ -2,14 +2,12 @@ import { useState } from 'react';
 import css from './styles.module.scss';
 import Header from '../../components/header';
 import Sidebar from '../../components/sidebar';
-import PagePrimary from '../page-primary/page-primary';
-import PageSecondary from '../page-secondary/page-secondary';
-import PageThird from '../page-third/page-third';
-import PageFourth from '../page-fourth/page-fourth';
+import MainPage from '../main/index';
+import StatisticsPage from '../statistics/index';
+import GalleryPage from '../gallery/index';
+import StepsPage from '../steps/index';
 import { Route, Routes, useLocation, useNavigate } from 'react-router-dom';
-import EliteGalerry from '../../components/elite-galerry';
-import VipGalerry from '../../components/vip-galerry';
-import ExtraGalerry from '../../components/extra-galerry';
+import LayoutGalerry from '../../components/layout-galerry';
 
 function ScrollPage() {
   const [currentPage, setCurrentPage] = useState(() => {
@@ -73,13 +71,13 @@ function ScrollPage() {
             : undefined
         }>
         <Routes>
-          <Route path='/' element={<PagePrimary />} />
-          <Route path='/statistics' element={<PageSecondary />} />
-          <Route path='/gallery' element={<PageThird />} />
-          <Route path='/steps' element={<PageFourth />} />
-          <Route path='/gallery/slider-elite' element={<EliteGalerry />} />
-          <Route path='/gallery/slider-vip' element={<VipGalerry />} />
-          <Route path='/gallery/slider-extra' element={<ExtraGalerry />} />
+          <Route path='/' element={<MainPage />} />
+          <Route path='/statistics' element={<StatisticsPage />} />
+          <Route path='/gallery' element={<GalleryPage />} />
+          <Route path='/steps' element={<StepsPage />} />
+          <Route path='/gallery/slider-elite' element={<LayoutGalerry />} />
+          <Route path='/gallery/slider-vip' element={<LayoutGalerry />} />
+          <Route path='/gallery/slider-extra' element={<LayoutGalerry />} />
         </Routes>
       </div>
       {(location === '/' ||

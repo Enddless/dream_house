@@ -2,10 +2,11 @@
   position: absolute;
   z-index: 10;
   top: 0;
-  left: 178px;
-  right: 178px;
+  left: calc(var(--index) * 6.2); //178px;
+  right: calc(var(--index) * 6.2); // 178px;
   padding: 10px 0;
   border-bottom: 1px solid rgba(#fff, 0.25);
+  font-size: calc(var(--index) * 0.51);
 }
 .navigation {
   display: flex;
@@ -126,4 +127,32 @@
   width: 50px;
   height: 50px;
   transition: all 500ms ease-in-out;
+}
+
+@media screen and (max-width: 910px) {
+  .menuLeft,
+  .menuRight {
+    column-gap: 20px;
+  }
+}
+@media screen and (max-width: 700px) {
+  .header {
+    left: calc(var(--index) * 1.2); //178px;
+    right: calc(var(--index) * 1.2); // 178px;
+  }
+}
+@media screen and (max-width: 610px) {
+  .menuLeft,
+  .menuRight {
+    column-gap: 10px;
+  }
+  .menuLeft {
+    width: 10%;
+  }
+  .menuRight {
+    width: 90%;
+  }
+  .menuLeft .phone {
+    display: none;
+  }
 }

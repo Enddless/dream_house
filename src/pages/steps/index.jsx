@@ -3,7 +3,7 @@ import { stepsData } from './data';
 import sprite from '../../assets/sprite.svg';
 import { useEffect, useState } from 'react';
 
-function PageFourth() {
+function StepsPage() {
   const [activeCard, setActiveCard] = useState(0);
   const [currentCard, setCurrentCard] = useState(0);
 
@@ -79,4 +79,4 @@ function PageFourth() {
   );
 }
 
-export default PageFourth;
+export default StepsPage;

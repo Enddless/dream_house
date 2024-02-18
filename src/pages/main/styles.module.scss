@@ -27,7 +27,7 @@
 .bottomTitle {
   position: absolute;
   top: 110px;
-  left: 52%;
+  left: calc(var(--index) * 5.6); //52%;
 }
 .subtitle {
   position: absolute;
@@ -103,11 +103,55 @@
 }
 .lineTop {
   transform: rotate(120deg);
-  top: -109px;
-  left: 28%;
+  top: calc(var(--index) * -4.3); //-109px;
+  left: calc(var(--index) * 2.3); //28%;
 }
 .lineBottom {
   transform: rotate(120deg);
-  top: 169px;
-  left: 165%;
+  top: calc(var(--index) * 3); //71px;
+  right: calc(var(--index) * -14); //417px;
+}
+
+@media screen and (max-width: 1400px) {
+  .lineBottom {
+    top: calc(var(--index) * 2); //71px;
+    right: calc(var(--index) * -14); //417px;
+  }
+}
+@media screen and (max-width: 1200px) {
+  .lineTop {
+    top: calc(var(--index) * -5); //-109px;
+    left: calc(var(--index) * 2.3); //28%;
+  }
+}
+@media screen and (max-width: 1000px) {
+  .lineBottom {
+    top: calc(var(--index) * 1.8); //71px;
+    right: calc(var(--index) * -14); //417px;
+  }
+  .subtitle {
+    top: 72px;
+  }
+}
+@media screen and (max-width: 700px) {
+  .lineTop {
+    top: calc(var(--index) * -6); //-109px;
+    left: calc(var(--index) * 2.1); //28%;
+  }
+  .lineBottom {
+    top: calc(var(--index) * 1.8); //71px;
+    right: calc(var(--index) * -16); //417px;
+  }
+}
+@media screen and (max-width: 500px) {
+  .lineTop,
+  .lineBottom {
+    display: none;
+  }
+  .bottomTitle {
+    top: 70px;
+  }
+  .subtitle {
+    top: 52px;
+  }
 }

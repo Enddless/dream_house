@@ -81,7 +81,7 @@ form {
     background: transparent;
     color: #ffac30;
     text-transform: uppercase;
-    font-size: 18px;
+    font-size: calc(var(--index) * 0.56); //18px;
     letter-spacing: 5px;
     cursor: pointer;
     text-align: left;
@@ -102,7 +102,7 @@ fieldset {
 }
 .errorMessage {
   color: rgb(231, 115, 80);
-  font-size: 12px;
+  font-size: calc(var(--index) * 0.37); //12px;
   position: absolute;
   bottom: -18px;
   right: 0px;
@@ -133,4 +133,18 @@ fieldset {
 }
 .count {
   font-family: 'Bruno Ace SC';
+}
+
+@media screen and (max-width: 600px) {
+  .feedback {
+    width: 100%;
+    padding: 10px;
+  }
+  .feedback:hover {
+    animation: none;
+    animation-name: none;
+  }
+  .unHovereffect {
+    animation: none;
+  }
 }

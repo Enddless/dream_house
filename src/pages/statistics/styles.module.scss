@@ -20,8 +20,12 @@
   flex-direction: column;
   position: relative;
   left: 30%;
-  top: 50%;
-  transform: translate(-30%, -50%);
+  top: 40%;
+  transform: translate(-30%, -40%);
+  -webkit-transform: translate(-30%, -40%);
+  -moz-transform: translate(-30%, -40%);
+  -ms-transform: translate(-30%, -40%);
+  -o-transform: translate(-30%, -40%);
 }
 .statistic {
   display: grid;
@@ -43,10 +47,21 @@
   transform: translate(-25%, 0);
   bottom: 75px;
   font-family: 'Open Sans';
-  font-size: 14px;
+  font-size: calc(var(--index) * 0.44); //14px;
   letter-spacing: 10px;
   text-transform: uppercase;
   svg {
     stroke: white;
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  .moreInfo {
+    width: 250px;
+  }
+}
+@media screen and (max-width: 800px) {
+  .moreInfo {
+    display: none;
   }
 }

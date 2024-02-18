@@ -39,13 +39,10 @@
   align-items: center;
   justify-content: center;
   position: relative;
-  /* top: 186px; */
-  /* right: -15px; */
   width: 200px;
   height: 200px;
   box-shadow: inset 0 0 0 1px rgb(104, 104, 104);
   border-radius: 50%;
-  /* margin-right: 70px; */
   grid-column: 1 / 2;
 }
 .circle {
@@ -53,7 +50,8 @@
   height: 100%;
   position: absolute;
   border-radius: 50%;
-  mask-image: radial-gradient(circle at center, transparent 69%, red 50%);
+  // mask-image: radial-gradient(circle at center, transparent 69%, red 50%);
+  mask-image: radial-gradient(circle, transparent 60%, black 100%);
 }
 .topCircle {
   width: 95%;
@@ -71,7 +69,6 @@
 
 .steps {
   display: flex;
-  /* width: 100%; */
   width: 80%;
   position: relative;
   grid-column: 2 / 3;
@@ -96,13 +93,34 @@
   }
 }
 .transition {
-  // position: absolute;
-  // top:50%;
-  // right:10%;
-  // top: 50%;
-  // transform: translate(-10%, -50%);
   grid-column: 3 / 4;
 }
 .next {
   cursor: pointer;
+}
+
+@media screen and (max-width: 1500px) {
+  .activeCard {
+    flex-direction: column;
+    row-gap: 30px;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .data {
+    display: flex;
+    flex-direction: column;
+    row-gap: 20px;
+  }
+  .steps {
+    width: 100%;
+    justify-content: center;
+  }
+  .title {
+    width: 100%;
+  }
+  .name,
+  .text {
+    text-align: center;
+  }
 }
