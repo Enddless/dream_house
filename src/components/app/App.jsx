@@ -5,7 +5,7 @@ import css from './styles.module.scss';
 function App() {
   return (
     <div className={css.app}>
-      <BrowserRouter>
+      <BrowserRouter basename='/dream_house'>
         <Routes>
           <Route exact path='/*' element={<ScrollPage />}></Route>
         </Routes>
