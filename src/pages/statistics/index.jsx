@@ -6,9 +6,9 @@ import CardStatistic from '../../components/card-statistic';
 
 function StatisticsPage() {
   return (
-    <div className={css.page}>
-      <div className={css.overlay}>
-        <div className={css.content}>
+    <main className={css.page}>
+      <section className={css.overlay}>
+        <section className={css.content}>
           <h2 className={css.title}>elite renovation of your apartment</h2>
 
           <div className={css.statistic}>
@@ -16,16 +16,16 @@ function StatisticsPage() {
               return <CardStatistic key={item.id} item={item} />;
             })}
           </div>
-        </div>
-      </div>
-      <div className={css.moreInfo}>
+        </section>
+      </section>
+      <section className={css.moreInfo}>
         more info about us
         <svg width='121' height='23' viewBox='0 0 121 23'>
           <use xlinkHref={`${sprite}#arrowDiscuss`}></use>
         </svg>
-      </div>
+      </section>
       <FeedbackForm />
-    </div>
+    </main>
   );
 }
 

@@ -3,9 +3,9 @@ import css from './styles.module.scss';
 
 function MainPage() {
   return (
-    <div className={css.page}>
-      <div className={css.overlay}>
-        <div className={css.content}>
+    <main className={css.page}>
+      <section className={css.overlay}>
+        <section className={css.content}>
           <h1 className={css.title}>
             <div className={css.topTitle}>
               <p className={css.topRight} data-heading='Dream'></p>
@@ -20,10 +20,10 @@ function MainPage() {
             </div>
           </h1>
           <h2 className={css.subtitle}>your personal</h2>
-        </div>
+        </section>
         <FeedbackForm />
-      </div>
-    </div>
+      </section>
+    </main>
   );
 }
 

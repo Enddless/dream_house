@@ -20,9 +20,7 @@ function Header() {
               <use xlinkHref={`${sprite}#menu`}></use>
             </svg>
 
-            <ul
-              className={classNamesEffects}
-              onMouseLeave={() => setShowSubmenu(!showSubmenu)}>
+            <ul className={classNamesEffects}>
               <li className={css.linkItem}>
                 <Link to='/'>Main menu</Link>
               </li>
@@ -58,7 +56,6 @@ function Header() {
           </li>
         </ul>
       </nav>
-      <div></div>
     </header>
   );
 }

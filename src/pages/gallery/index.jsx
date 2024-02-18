@@ -3,8 +3,8 @@ import css from './styles.module.scss';
 
 function GalleryPage() {
   return (
-    <div className={css.page}>
-      <div className={css.content}>
+    <main className={css.page}>
+      <section className={css.content}>
         <Link to='/gallery/slider-elite' className={css.photo}>
           <span>elite</span>
         </Link>
@@ -16,8 +16,8 @@ function GalleryPage() {
         <Link to='/gallery/slider-extra' className={css.photo}>
           <span>extra</span>
         </Link>
-      </div>
-    </div>
+      </section>
+    </main>
   );
 }
 

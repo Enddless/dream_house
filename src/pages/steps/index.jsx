@@ -37,9 +37,9 @@ function StepsPage() {
   }, [activeCard, stepsData]);
 
   return (
-    <div className={css.page}>
-      <div className={css.overlay}>
-        <div className={css.content}>
+    <main className={css.page}>
+      <section className={css.overlay}>
+        <section className={css.content}>
           <h2 className={css.title}>6 steps to your dream house:</h2>
 
           <div className={css.data}>
@@ -73,9 +73,9 @@ function StepsPage() {
               </svg>
             </div>
           </div>
-        </div>
-      </div>
-    </div>
+        </section>
+      </section>
+    </main>
   );
 }
 
