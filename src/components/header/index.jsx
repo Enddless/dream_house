@@ -3,6 +3,7 @@ import sprite from '../../assets/sprite.svg';
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import classNames from 'classnames';
+import Logo from '../logo/index';
 
 function Header() {
   const [showSubmenu, setShowSubmenu] = useState(false);
@@ -14,6 +15,9 @@ function Header() {
   return (
     <header className={css.header}>
       <nav className={css.navigation}>
+        <div className={css.logoContainer}>
+          <Logo />
+        </div>
         <ul className={css.menuLeft}>
           <li className={css.link} onClick={() => setShowSubmenu(!showSubmenu)}>
             <svg width='30' height='18' viewBox='0 0 30 18'>
@@ -53,6 +57,9 @@ function Header() {
                 </div>
               </div>
             </div>
+            <svg width='14' height='13' viewBox='0 0 14 13' className={css.dblphone}>
+              <use xlinkHref={`${sprite}#phone`}></use>
+            </svg>
           </li>
         </ul>
       </nav>

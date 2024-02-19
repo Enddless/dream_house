@@ -28,7 +28,7 @@
   border-right: none;
 }
 
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 800px) and (orientation: portrait) {
   .card {
     grid-column: span 12;
     border-left: none;
@@ -44,5 +44,12 @@
   .card:last-child {
     border-top: none;
     border-bottom: none;
+  }
+}
+
+//orientation landscape
+@media (max-device-width: 767px) and (orientation: landscape) {
+  .moreInfo {
+    display: none;
   }
 }

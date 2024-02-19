@@ -5,7 +5,9 @@ import sprite from '../../assets/sprite.svg';
 function Sidebar() {
   return (
     <aside className={css.sidebar}>
-      <Logo />
+      <div className={css.logoContainer}>
+        <Logo />
+      </div>
       <p className={css.text}>apartment renovation</p>
       <div className={css.decoration}></div>
       <div className={css.social}>

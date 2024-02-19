@@ -42,3 +42,17 @@
     display: none;
   }
 }
+
+//orientation landscape
+@media (max-device-width: 767px) and (orientation: landscape) {
+  .sidebar {
+    left: 15px;
+    bottom: 15px;
+  }
+  .logoContainer {
+    display: none;
+  }
+  .social {
+    row-gap: 10px;
+  }
+}

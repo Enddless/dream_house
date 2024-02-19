@@ -22,7 +22,7 @@
   flex-direction: column;
 }
 .title {
-  font-size: 20px;
+  font-size: calc(var(--index) * 0.6); // 20px;
   width: 50%;
   margin-bottom: 40px;
   text-align: center;
@@ -65,8 +65,8 @@
   align-items: center;
   justify-content: center;
   font-family: $font-family-secondary;
-  font-size: 64px;
-  line-height: 70px;
+  font-size: calc(var(--index) * 3.25); // 64px;
+  line-height: calc(var(--index) * 3.4); //70px;
 }
 
 .steps {
@@ -84,12 +84,12 @@
   align-items: center;
   column-gap: 41px;
   .name {
-    font-size: 36px;
+    font-size: calc(var(--index) * 1.18); //36px;
     font-family: $font-family-third;
     width: 290px;
   }
   .text {
-    font-size: 18px;
+    font-size: calc(var(--index) * 0.8); //18px;
     width: 290px;
     line-height: 30px;
   }
@@ -101,14 +101,16 @@
   cursor: pointer;
 }
 
-@media screen and (max-width: 1500px) {
+@media screen and (max-width: 1400px) {
+  .data {
+    column-gap: 25px;
+  }
   .activeCard {
-    flex-direction: column;
-    row-gap: 30px;
+    column-gap: 10px;
   }
 }
 
-@media screen and (max-width: 900px) {
+@media screen and (max-width: 1250px) {
   .data {
     display: flex;
     flex-direction: column;
@@ -124,5 +126,24 @@
   .name,
   .text {
     text-align: center;
+  }
+}
+@media screen and (max-width: 900px) {
+  .card {
+    flex-direction: column;
+    row-gap: 30px;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .scrollBar {
+    width: 100px;
+    height: 100px;
+  }
+  .data {
+    row-gap: 82px;
+  }
+  .card {
+    row-gap: 77px;
   }
 }

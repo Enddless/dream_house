@@ -38,7 +38,7 @@
     );
     width: 2px;
     height: 50%;
-    z-index: 10;
+    z-index: 1;
     border-radius: 5px;
   }
   &:last-child::after {
@@ -46,7 +46,6 @@
   }
   span {
     position: relative;
-    z-index: 11;
     color: white;
     width: 100%;
     text-align: center;

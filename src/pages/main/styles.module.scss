@@ -155,3 +155,27 @@
     top: 52px;
   }
 }
+
+//orientation landscape
+@media (max-device-width: 767px) and (orientation: landscape) {
+  .content {
+    width: 218px;
+    height: 112px;
+    position: relative;
+    left: 0;
+    top: 0;
+    transform: none;
+    margin: 0 auto;
+    padding-top: 120px;
+  }
+  .bottomTitle {
+    top: 47px;
+  }
+  .lineTop,
+  .lineBottom {
+    display: none;
+  }
+  .subtitle {
+    top: 161px;
+  }
+}

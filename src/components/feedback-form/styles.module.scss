@@ -104,7 +104,7 @@ fieldset {
 }
 .errorMessage {
   color: rgb(231, 115, 80);
-  font-size: calc(var(--index) * 0.37); //12px;
+  font-size: 12px;
   position: absolute;
   bottom: -18px;
   right: 0px;
@@ -148,5 +148,34 @@ fieldset {
   }
   .unHovereffect {
     animation: none;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  form .discuss {
+    font-size: 15px;
+  }
+}
+
+//orientation landscape
+@media (max-device-width: 767px) and (orientation: landscape) {
+  .feedback {
+    width: 80%;
+    padding: 20px 20px 10px;
+
+    form {
+      flex-direction: row;
+      justify-content: flex-end;
+    }
+  }
+  .feedback:hover {
+    animation: none;
+    animation-name: none;
+  }
+  .unHovereffect {
+    animation: none;
+  }
+  .errorMessage {
+    top: -15px;
   }
 }

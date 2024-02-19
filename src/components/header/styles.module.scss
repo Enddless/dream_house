@@ -128,6 +128,12 @@
   height: 50px;
   transition: all 500ms ease-in-out;
 }
+.dblphone {
+  display: none;
+}
+.logoContainer {
+  display: none;
+}
 
 @media screen and (max-width: 910px) {
   .menuLeft,
@@ -154,5 +160,25 @@
   }
   .menuLeft .phone {
     display: none;
+  }
+}
+
+/* orientation landscape */
+@media (max-device-width: 767px) and (orientation: landscape) {
+  .header {
+    left: 20px;
+    right: 20px;
+  }
+  .circle {
+    display: none;
+  }
+  .dblphone {
+    display: block;
+  }
+  .navigation {
+    height: 50px;
+  }
+  .logoContainer {
+    display: block;
   }
 }
