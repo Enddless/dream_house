@@ -1,14 +1,18 @@
+@import './styles/variables.scss';
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
-
+:root {
+  --index: calc(1vw + 1vh);
+}
 body {
   margin: 0;
   min-width: 320px;
   min-height: 100vh;
-  font-family: "Roboto";
+  font-family: $font-family-primary;
   color: white;
   user-select: none;
 }
@@ -21,11 +25,11 @@ li {
 }
 
 h1 {
-  font-family: "Bruno Ace SC";
-  line-height: 90px;
-  font-size: 96px;
+  font-family: $font-family-secondary;
+  line-height: calc(var(--index) * 2.8); // 90px;
+  font-size: calc(var(--index) * 3); //96px;
 }
 h2 {
-  font-size: 16px;
-  letter-spacing: 10px;
+  font-size: calc(var(--index) * 0.5); //16px;
+  letter-spacing: calc(var(--index) * 0.3); //10px;
 }

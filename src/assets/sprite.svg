@@ -135,4 +135,9 @@
 			<line x1="67.2476" y1="29.8926" x2="67.2476" y2="67.8926" stroke="#FFAC30" stroke-linecap="round" />
 		</g>
 	</symbol>
+	<symbol id="arrow-right" width="24" height="31" viewBox="0 0 24 31" fill="none">
+		<g>
+			<path d="M1 1L23 15.5L1 30" stroke="white" />
+		</g>
+	</symbol>
 </svg>

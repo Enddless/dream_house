@@ -1,19 +1,22 @@
 .sidebar {
-  position: absolute;
-  top: 24px;
-  left: 65px;
-  bottom: 54px;
-  width: 50px;
-  z-index:10;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
+  height: 100vh;
+  grid-column: 1;
+  grid-row: 1 / 2;
+  padding: 24px 0;
+}
+.absolutePosition {
+  position: absolute;
+  z-index: 1;
+  left: 28px;
 }
 .text {
   text-transform: uppercase;
   letter-spacing: 7px;
-  font-size: 12px;
+  font-size: calc(var(--index) * 0.4); //12px;
   color: rgba(255, 255, 255, 0.5);
   writing-mode: vertical-rl;
   -webkit-writing-mode: vertical-rl;
@@ -22,12 +25,23 @@
 }
 .decoration {
   width: 1px;
-  height: 10%;
+  height: calc(var(--index) * 5); //10%;
   background: rgba(255, 255, 255, 0.25);
-  margin:10px 0;
+  margin: 10px 0;
 }
 .social {
   display: flex;
   flex-direction: column;
   row-gap: 20px;
+}
+.link:hover {
+  cursor: pointer;
+  stroke: #ffac30;
+  fill: #ffac30;
+}
+
+@media screen and (max-width: 500px) {
+  .sidebar {
+    display: none;
+  }
 }

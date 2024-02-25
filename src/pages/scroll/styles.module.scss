@@ -1,0 +1,88 @@
+.scroll-page {
+  height: 100vh;
+  overflow-y: scroll;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.dots {
+  position: absolute;
+  right: 50px;
+  top: 50%;
+  transform: translate(0, -50%);
+  z-index: 100;
+  display: flex;
+  flex-direction: column;
+  row-gap: 25px;
+  align-items: center;
+  justify-content: center;
+}
+.dot {
+  cursor: pointer;
+  display: block;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  border: 0;
+  width: 13px;
+  height: 13px;
+  background-color: rgba(255, 255, 255, 0.4);
+  border-radius: 100%;
+  padding: 0;
+  cursor: pointer;
+  position: relative;
+  // opacity: 0.2;
+  transition: opacity 0.2s ease-in-out;
+  outline: none;
+}
+.dot.active {
+  background-color: #ffac30; //#709cf5
+}
+.dot:before {
+  content: '';
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  height: 100%;
+  border-radius: 100%;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  opacity: 0;
+  transition:
+    opacity 0.4s ease-in-out,
+    width 0.4s ease-in-out,
+    height 0.4s ease-in-out;
+}
+
+.active {
+  opacity: 1;
+}
+.active:before {
+  width: 330%;
+  height: 330%;
+  opacity: 1;
+}
+
+.page {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@media screen and (max-width: 400px) {
+  .content {
+    width: 220px;
+    height: 119px;
+  }
+  .dots {
+    right: 30px;
+  }
+  .dot {
+    width: 7px;
+    height: 7px;
+  }
+}
