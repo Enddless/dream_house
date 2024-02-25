@@ -150,10 +150,6 @@
   }
 }
 @media screen and (max-width: 700px) {
-  // .header {
-  //   left: calc(var(--index) * 1.2); //178px;
-  //   right: calc(var(--index) * 1.2); // 178px;
-  // }
   .absolutePosition {
     display: none;
   }
@@ -180,22 +176,3 @@
     padding: 0 5px;
   }
 }
-/* orientation landscape */
-// @media handheld and (max-device-width: 767px) and (orientation: landscape) {
-//   .header {
-//     left: 20px;
-//     right: 20px;
-//   }
-//   .circle {
-//     display: none;
-//   }
-//   .dblphone {
-//     display: block;
-//   }
-//   .navigation {
-//     height: 50px;
-//   }
-//   .logoContainer {
-//     display: block;
-//   }
-// }

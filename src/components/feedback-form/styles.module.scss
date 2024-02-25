@@ -159,26 +159,3 @@ fieldset {
     width: 100%;
   }
 }
-
-//orientation landscape
-// @media (max-device-width: 767px) and (orientation: landscape) {
-//   .feedback {
-//     width: 80%;
-//     padding: 20px 20px 10px;
-
-//     form {
-//       flex-direction: row;
-//       justify-content: flex-end;
-//     }
-//   }
-//   .feedback:hover {
-//     animation: none;
-//     animation-name: none;
-//   }
-//   .unHovereffect {
-//     animation: none;
-//   }
-//   .errorMessage {
-//     top: -15px;
-//   }
-// }
