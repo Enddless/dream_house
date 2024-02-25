@@ -137,9 +137,9 @@ fieldset {
   font-family: $font-family-secondary;
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 500px) {
   .feedback {
-    width: 100%;
+    width: 300px;
     padding: 10px;
   }
   .feedback:hover {
@@ -155,27 +155,30 @@ fieldset {
   form .discuss {
     font-size: 15px;
   }
+  .feedback {
+    width: 100%;
+  }
 }
 
 //orientation landscape
-@media (max-device-width: 767px) and (orientation: landscape) {
-  .feedback {
-    width: 80%;
-    padding: 20px 20px 10px;
+// @media (max-device-width: 767px) and (orientation: landscape) {
+//   .feedback {
+//     width: 80%;
+//     padding: 20px 20px 10px;
 
-    form {
-      flex-direction: row;
-      justify-content: flex-end;
-    }
-  }
-  .feedback:hover {
-    animation: none;
-    animation-name: none;
-  }
-  .unHovereffect {
-    animation: none;
-  }
-  .errorMessage {
-    top: -15px;
-  }
-}
+//     form {
+//       flex-direction: row;
+//       justify-content: flex-end;
+//     }
+//   }
+//   .feedback:hover {
+//     animation: none;
+//     animation-name: none;
+//   }
+//   .unHovereffect {
+//     animation: none;
+//   }
+//   .errorMessage {
+//     top: -15px;
+//   }
+// }

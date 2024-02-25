@@ -1,18 +1,25 @@
 .header {
-  position: absolute;
-  z-index: 10;
-  top: 0;
-  left: calc(var(--index) * 6.2); //178px;
-  right: calc(var(--index) * 6.2); // 178px;
+  // left: calc(var(--index) * 6.2);
+  // right: calc(var(--index) * 6.2);
   padding: 10px 0;
-  border-bottom: 1px solid rgba(#fff, 0.25);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.25);
   font-size: calc(var(--index) * 0.51);
+  padding-right: 0 calc(var(--index) * 6.2);
+  background: transparent;
+  grid-column: 2;
+  grid-row: 1;
+}
+.absolutePosition {
+  position: absolute;
+  width: 85%;
+  top: 0;
+  left: 108px;
+  z-index: 1;
 }
 .navigation {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  height: 80px;
 }
 .menuLeft,
 .menuRight {
@@ -41,6 +48,7 @@
   color: transparent;
   font-size: 1px;
   line-height: 1px;
+  z-index: 1;
 }
 .hoverEffect {
   animation-name: hoverForm;
@@ -142,9 +150,12 @@
   }
 }
 @media screen and (max-width: 700px) {
-  .header {
-    left: calc(var(--index) * 1.2); //178px;
-    right: calc(var(--index) * 1.2); // 178px;
+  // .header {
+  //   left: calc(var(--index) * 1.2); //178px;
+  //   right: calc(var(--index) * 1.2); // 178px;
+  // }
+  .absolutePosition {
+    display: none;
   }
 }
 @media screen and (max-width: 610px) {
@@ -162,23 +173,29 @@
     display: none;
   }
 }
-
-/* orientation landscape */
-@media (max-device-width: 767px) and (orientation: landscape) {
+@media screen and (max-width: 500px) {
   .header {
-    left: 20px;
-    right: 20px;
-  }
-  .circle {
-    display: none;
-  }
-  .dblphone {
-    display: block;
-  }
-  .navigation {
-    height: 50px;
-  }
-  .logoContainer {
-    display: block;
+    grid-column: 1 / 3;
+    grid-row: 1;
+    padding: 0 5px;
   }
 }
+/* orientation landscape */
+// @media handheld and (max-device-width: 767px) and (orientation: landscape) {
+//   .header {
+//     left: 20px;
+//     right: 20px;
+//   }
+//   .circle {
+//     display: none;
+//   }
+//   .dblphone {
+//     display: block;
+//   }
+//   .navigation {
+//     height: 50px;
+//   }
+//   .logoContainer {
+//     display: block;
+//   }
+// }

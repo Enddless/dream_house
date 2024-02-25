@@ -1,14 +1,17 @@
 .sidebar {
-  position: absolute;
-  top: 24px;
-  left: 65px;
-  bottom: 54px;
-  width: 50px;
-  z-index: 10;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
+  height: 100vh;
+  grid-column: 1;
+  grid-row: 1 / 2;
+  padding: 24px 0;
+}
+.absolutePosition {
+  position: absolute;
+  z-index: 1;
+  left: 28px;
 }
 .text {
   text-transform: uppercase;
@@ -37,22 +40,22 @@
   fill: #ffac30;
 }
 
-@media screen and (max-width: 700px) {
+@media screen and (max-width: 500px) {
   .sidebar {
     display: none;
   }
 }
 
 //orientation landscape
-@media (max-device-width: 767px) and (orientation: landscape) {
-  .sidebar {
-    left: 15px;
-    bottom: 15px;
-  }
-  .logoContainer {
-    display: none;
-  }
-  .social {
-    row-gap: 10px;
-  }
-}
+// @media (max-device-width: 767px) and (orientation: landscape) {
+//   .sidebar {
+//     left: 15px;
+//     bottom: 15px;
+//   }
+//   .logoContainer {
+//     display: none;
+//   }
+//   .social {
+//     row-gap: 10px;
+//   }
+// }

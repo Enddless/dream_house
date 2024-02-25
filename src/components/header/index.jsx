@@ -1,19 +1,23 @@
 import css from './styles.module.scss';
 import sprite from '../../assets/sprite.svg';
 import { useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 import classNames from 'classnames';
 import Logo from '../logo/index';
 
 function Header() {
+  const location = useLocation().pathname;
   const [showSubmenu, setShowSubmenu] = useState(false);
   const classNamesEffects = classNames(css.submenu, {
     [css.hoverEffect]: showSubmenu
     // [css.unHovereffect]: !showSubmenu
   });
+  const headerClassnamesList = classNames(css.header, {
+    [css.absolutePosition]: location === '/gallery'
+  });
 
   return (
-    <header className={css.header}>
+    <header className={headerClassnamesList}>
       <nav className={css.navigation}>
         <div className={css.logoContainer}>
           <Logo />

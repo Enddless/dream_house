@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import css from './styles.module.scss';
-import Header from '../../components/header';
-import Sidebar from '../../components/sidebar';
+// import Header from '../../components/header';
+// import Sidebar from '../../components/sidebar';
 import MainPage from '../main/index';
 import StatisticsPage from '../statistics/index';
 import GalleryPage from '../gallery/index';
@@ -58,8 +58,8 @@ function ScrollPage() {
 
   return (
     <>
-      <Header />
-      <Sidebar />
+      {/* <Header />
+      <Sidebar /> */}
       <div
         className={css.scrollPage}
         onWheel={

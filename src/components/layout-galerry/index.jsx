@@ -2,6 +2,8 @@ import { Link, useLocation } from 'react-router-dom';
 import css from './styles.module.scss';
 import SliderGalerry from '../slider-galerry';
 import { elite, extra, vip } from './data';
+import Header from '../header';
+import Sidebar from '../sidebar';
 
 function LayoutGalerry() {
   const location = useLocation().pathname;
@@ -19,16 +21,18 @@ function LayoutGalerry() {
   };
   const sliderData = foundData(location);
   return (
-    <div className={css.page}>
-      <div className={css.content}>
-        <div className={css.container}>
+    <main className={css.page}>
+      <section className={css.gridContainer}>
+        <Header />
+        <Sidebar />
+        <div className={css.content}>
           <SliderGalerry data={sliderData} />
+          <div className={css.backButton}>
+            <Link to='/'>To main</Link>
+          </div>
         </div>
-      </div>
-      <div className={css.backButton}>
-        <Link to='/'>To main</Link>
-      </div>
-    </div>
+      </section>
+    </main>
   );
 }
 

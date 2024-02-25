@@ -1,13 +1,17 @@
 import css from './styles.module.scss';
 import Logo from '../logo/index';
 import sprite from '../../assets/sprite.svg';
+import { useLocation } from 'react-router-dom';
+import classNames from 'classnames';
 
 function Sidebar() {
+  const location = useLocation().pathname;
+  const sidebarClassnamesList = classNames(css.sidebar, {
+    [css.absolutePosition]: location === '/gallery'
+  });
   return (
-    <aside className={css.sidebar}>
-      <div className={css.logoContainer}>
-        <Logo />
-      </div>
+    <aside className={sidebarClassnamesList}>
+      <Logo />
       <p className={css.text}>apartment renovation</p>
       <div className={css.decoration}></div>
       <div className={css.social}>

@@ -2,6 +2,8 @@ import css from './styles.module.scss';
 import { stepsData } from './data';
 import sprite from '../../assets/sprite.svg';
 import { useEffect, useState } from 'react';
+import Header from '../../components/header';
+import Sidebar from '../../components/sidebar';
 
 function StepsPage() {
   const [activeCard, setActiveCard] = useState(0);
@@ -39,40 +41,44 @@ function StepsPage() {
   return (
     <main className={css.page}>
       <section className={css.overlay}>
-        <section className={css.content}>
-          <h2 className={css.title}>6 steps to your dream house:</h2>
+        <section className={css.gridContainer}>
+          <Header />
+          <Sidebar />
+          <section className={css.content}>
+            <h2 className={css.title}>6 steps to your dream house:</h2>
 
-          <div className={css.data}>
-            <div className={css.scrollBar}>
-              <div className={css.circle} style={{ background: circleBorder }} />
-              <div className={css.topCircle}>{activeCard + 1}</div>
+            <div className={css.data}>
+              <div className={css.scrollBar}>
+                <div className={css.circle} style={{ background: circleBorder }} />
+                <div className={css.topCircle}>{activeCard + 1}</div>
+              </div>
+              <div className={css.steps}>
+                {stepsData.map((item, index) => {
+                  return (
+                    <div
+                      className={`${css.card} ${activeCard === index ? `${css.activeCard}` : ``}`}
+                      key={item.id}>
+                      <svg width='120' height='105'>
+                        <use xlinkHref={`${sprite}#${item.icon}`}></use>
+                      </svg>
+                      <p className={css.name}>{item.title}</p>
+                      <p className={css.text}>{item.text}</p>
+                    </div>
+                  );
+                })}
+              </div>
+              <div className={css.transition}>
+                <svg
+                  width='24'
+                  height='31'
+                  viewBox='0 0 24 31'
+                  onClick={handleClick}
+                  className={css.next}>
+                  <use xlinkHref={`${sprite}#arrow-right`}></use>
+                </svg>
+              </div>
             </div>
-            <div className={css.steps}>
-              {stepsData.map((item, index) => {
-                return (
-                  <div
-                    className={`${css.card} ${activeCard === index ? `${css.activeCard}` : ``}`}
-                    key={item.id}>
-                    <svg width='120' height='105'>
-                      <use xlinkHref={`${sprite}#${item.icon}`}></use>
-                    </svg>
-                    <p className={css.name}>{item.title}</p>
-                    <p className={css.text}>{item.text}</p>
-                  </div>
-                );
-              })}
-            </div>
-            <div className={css.transition}>
-              <svg
-                width='24'
-                height='31'
-                viewBox='0 0 24 31'
-                onClick={handleClick}
-                className={css.next}>
-                <use xlinkHref={`${sprite}#arrow-right`}></use>
-              </svg>
-            </div>
-          </div>
+          </section>
         </section>
       </section>
     </main>

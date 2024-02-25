@@ -106,6 +106,10 @@
   .photo {
     height: 33.3%;
 
+    &::after {
+      background: trnsparent;
+    }
+
     &:nth-child(1) {
       &:hover {
         width: 100%;
