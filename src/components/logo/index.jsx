@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 function Logo() {
   return (
     <Link to='/'>
-      <img src={src} alt='logotype' style={{ cursor: 'pointer' }} />{' '}
+      <img src={src} alt='logotype' loading='lazy' style={{ cursor: 'pointer' }} />{' '}
     </Link>
   );
 }

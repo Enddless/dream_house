@@ -19,7 +19,7 @@ function SliderGalerry({ data }) {
       {data.map((card) => {
         return (
           <div key={card.id}>
-            <img src={card.path} alt={card.name} />
+            <img src={card.path} alt={card.name} loading='lazy' />
           </div>
         );
       })}
