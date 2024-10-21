@@ -1232,7 +1232,7 @@ fieldset {
   background: rgba(0, 0, 0, 0.502);
 }
 .gallery__item:nth-child(1) {
-  background: url('../../images/elite-gallery/elite-photo.jpg') no-repeat;
+  background: url('../images/elite-gallery/elite-photo.jpg') no-repeat;
   background-size: cover;
   background-position: left;
   -webkit-transition: all 1s ease;
@@ -1255,7 +1255,7 @@ fieldset {
   }
 }
 .gallery__item:nth-child(2) {
-  background: url('../../images/vip-gallery/vip-photo.jpg') no-repeat;
+  background: url('../images/vip-gallery/vip-photo.jpg') no-repeat;
   background-size: cover;
   background-position: center;
   -webkit-transition: all 1s ease;
@@ -1281,7 +1281,7 @@ fieldset {
   color: #ffac30;
 }
 .gallery__item:nth-child(3) {
-  background: url('../../images/extra-gallery/extra-photo.jpg') no-repeat;
+  background: url('../images/extra-gallery/extra-photo.jpg') no-repeat;
   background-size: cover;
   background-position: right;
   -webkit-transition: all 1s ease;
