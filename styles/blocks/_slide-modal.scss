@@ -1,0 +1,20 @@
+.slide-modal {
+  background-color: rgba(0, 0, 0, 0.9);
+
+  & .mobile-overlay__body {
+    width: 70%;
+    margin: 0 auto;
+    height: calc(100svh - 150px);
+  }
+
+  & .swiper-wrapper {
+    // height: 100%;
+    max-height: 450px;
+  }
+  & .swiper-slide {
+    cursor: grab;
+  }
+  & .swiper-pagination-bullet-active {
+    background: var(--color-accent);
+  }
+}

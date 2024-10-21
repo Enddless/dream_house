@@ -1,0 +1,74 @@
+.section {
+  position: relative;
+  width: 100%;
+  min-height: 100svh;
+  scroll-snap-align: start;
+
+  &--hero {
+    background: url('../../images/primary.jpg') no-repeat;
+    background-size: cover;
+    background-position: center;
+    &::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+
+      background-color: #00000080;
+      z-index: 1;
+    }
+  }
+
+  &--statistics {
+    background: url('../../images/secondary.jpg') no-repeat;
+    background-size: cover;
+    background-position: center;
+    &::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+
+      background-color: #00000080;
+      z-index: 1;
+    }
+  }
+
+  &--pricing {
+    background: url('../../images/third.jpg') no-repeat;
+    background-size: cover;
+    background-position: center;
+    &::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+
+      background-color: #00000080;
+      z-index: 1;
+    }
+  }
+
+  &--steps {
+    background: url('../../images/fourth.jpg') no-repeat;
+    background-size: cover;
+    background-position: center;
+    &::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+
+      background-color: #00000080;
+      z-index: 1;
+    }
+  }
+}

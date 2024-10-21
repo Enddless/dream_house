@@ -1,0 +1,7 @@
+@import 'normalize', 'fonts', 'mixins', 'media', 'variables', 'utils', 'globals';
+
+@import 'blocks/grid', 'blocks/button', 'blocks/burger-button', 'blocks/cross-button',
+  'blocks/mobile-overlay', 'blocks/section', 'blocks/sidebar', 'blocks/body-dots',
+  'blocks/main', 'blocks/header', 'blocks/hero', 'blocks/statistics', 'blocks/gallery',
+  'blocks/slide-modal', 'blocks/soc1al', 'blocks/pricing', 'blocks/irs-range',
+  'blocks/steps';

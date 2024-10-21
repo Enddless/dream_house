@@ -1,0 +1,10 @@
+.soc1al {
+  &__link {
+    cursor: pointer;
+    fill: var(--color-gray-alt);
+
+    @include hover {
+      fill: var(--color-accent);
+    }
+  }
+}

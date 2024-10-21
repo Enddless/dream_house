@@ -1,0 +1,90 @@
+.steps {
+  width: 100%;
+  height: 100svh;
+  padding-block: var(--section-padding-y);
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 120px;
+
+  z-index: 5;
+
+  &__title {
+    @include fluid-text(20, 18);
+    font-family: var(--font-family-secondary);
+    font-weight: 700;
+    text-align: center;
+    letter-spacing: 0.3em;
+    text-transform: uppercase;
+  }
+
+  &__progress,
+  &__card {
+    grid-column: 1;
+    font-family: var(--font-family-secondary);
+  }
+
+  &__info {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+
+    @include tablet {
+      max-width: 350px;
+    }
+  }
+
+  &__data {
+    height: 250px;
+    max-width: 650px;
+    margin-top: 40px;
+
+    @include tablet {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      max-width: 100%;
+    }
+
+    @include mobile {
+      height: auto;
+    }
+
+    & ::part(circle) {
+      stroke: var(--color-gray-alt);
+    }
+    & ::part(base) {
+      width: 200px;
+      height: auto;
+    }
+
+    & ::part(value) {
+      stroke: var(--color-accent);
+    }
+
+    & ::part(text-value) {
+      fill: var(--color-accent);
+    }
+  }
+
+  &__container {
+    display: flex;
+  }
+
+  &__card {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  &__transition {
+    & svg * {
+      fill: var(--color-accent);
+    }
+    &-button {
+      cursor: pointer;
+    }
+  }
+}
