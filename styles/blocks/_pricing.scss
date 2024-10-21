@@ -1,0 +1,152 @@
+.pricing {
+  width: 100%;
+  height: 100svh;
+  padding-block: var(--section-padding-y);
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 120px;
+
+  z-index: 5;
+
+  &__form {
+    backdrop-filter: blur(3px);
+    border: 1px solid var(--color-gray-alt);
+    border-radius: var(--border-radius);
+    padding: 20px 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+
+    @include tablet {
+      width: 90%;
+    }
+
+    &-title {
+      @include fluid-text(20, 18);
+      font-family: var(--font-family-secondary);
+      font-weight: 700;
+      text-align: center;
+      letter-spacing: 0.3em;
+      text-transform: uppercase;
+    }
+  }
+
+  &__group-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  &__range-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+
+    @include mobile {
+      flex-wrap: wrap;
+    }
+  }
+
+  &__range {
+    display: block;
+    width: 100%;
+  }
+
+  &__size-number {
+    @include fluid-text(18, 16);
+
+    font-weight: 500;
+    line-height: 24px;
+    text-align: center;
+    display: inline-block;
+  }
+
+  &__radio-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+
+    @include tablet {
+      max-width: 100%;
+    }
+  }
+
+  &__label {
+    max-width: 217px;
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    cursor: pointer;
+
+    @include tablet {
+      max-width: 100%;
+    }
+  }
+
+  &__radio {
+    display: none;
+
+    &-text {
+      @include fluid-text(14, 12);
+
+      font-weight: 500;
+      font-size: 14px;
+      line-height: 30px;
+      pointer-events: none;
+    }
+
+    &:checked + .pricing__custom-radio {
+      background: var(--color-accent);
+      transition: background var(--transition-duration) ease;
+    }
+  }
+
+  &__custom-radio {
+    display: block;
+    width: 20px;
+    height: 20px;
+    border: 1px solid var(--color-light);
+    border-radius: 50%;
+    cursor: pointer;
+    flex-shrink: 0;
+    position: relative;
+    transition: background var(--transition-duration) ease;
+  }
+
+  &__bottom-wrapper {
+    display: flex;
+    flex: 1 0 auto;
+    justify-content: space-between;
+
+    @include mobile {
+      gap: 20px;
+      flex-direction: column;
+    }
+  }
+
+  & #demo_0 {
+    opacity: 0;
+    pointer-events: none;
+  }
+
+  &__square-wrapper,
+  &__view-wrapper,
+  &__price-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 170px;
+  }
+
+  &__price-wrapper {
+    width: 250px;
+  }
+
+  &__output {
+    @include fluid-text(24, 22);
+    line-height: 24px;
+  }
+}

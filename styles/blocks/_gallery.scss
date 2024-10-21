@@ -1,0 +1,113 @@
+.gallery {
+  width: 100%;
+  height: 100vh;
+
+  &__main {
+    width: 100%;
+    height: 100vh;
+  }
+  &__body {
+    @include tablet {
+      height: 100svh;
+    }
+  }
+  &__list {
+    display: flex;
+
+    @include tablet {
+      flex-direction: column;
+      height: 100svh;
+    }
+  }
+  &__item {
+    @include fluid-text(40, 30);
+
+    width: 100%;
+    height: 100svh;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-transform: uppercase;
+
+    @include tablet {
+      flex: 1;
+    }
+
+    &::after {
+      content: '';
+      position: relative;
+      right: -1px;
+      background: linear-gradient(
+        0deg,
+        rgb(166, 155, 155),
+        rgb(255, 255, 255),
+        rgb(166, 155, 155)
+      );
+      width: 2px;
+      height: 50%;
+      z-index: 1;
+      border-radius: 5px;
+    }
+    &:last-child::after {
+      width: 0;
+    }
+    & span {
+      position: relative;
+      color: white;
+      width: 100%;
+      text-align: center;
+    }
+
+    &::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.502);
+    }
+
+    &:nth-child(1) {
+      background: url('../../images/elite-gallery/elite-photo.jpg') no-repeat;
+      background-size: cover;
+      background-position: left;
+      transition: all 1s ease;
+
+      @include hover {
+        width: 200%;
+        cursor: pointer;
+        transition: all 1s ease;
+      }
+    }
+
+    &:nth-child(2) {
+      background: url('../../images/vip-gallery/vip-photo.jpg') no-repeat;
+      background-size: cover;
+      background-position: center;
+      transition: all 1s ease;
+
+      @include hover {
+        width: 200%;
+        cursor: pointer;
+        transition: all 1s ease;
+      }
+      & span {
+        color: #ffac30;
+      }
+    }
+
+    &:nth-child(3) {
+      background: url('../../images/extra-gallery/extra-photo.jpg') no-repeat;
+      background-size: cover;
+      background-position: right;
+      transition: all 1s ease;
+      @include hover {
+        width: 200%;
+        cursor: pointer;
+        transition: all 1s ease;
+      }
+    }
+  }
+}

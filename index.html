@@ -2,30 +2,374 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8" />
-  <link rel="icon" type="image/svg+xml" href="/icon.ico" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Bruno+Ace+SC&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/svg+xml" href="./images/icon.ico" />
+  <meta charset="UTF-8">
+  <meta name="viewport"
+    content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/ion-rangeslider/2.3.1/js/ion.rangeSlider.min.js" defer></script>
+  <script src="https://cdn.jsdelivr.net/npm/js-circle-progress/dist/circle-progress.min.js" defer
+    type="module"></script>
+  <script src="https://unpkg.com/swiper/swiper-bundle.min.js" defer></script>
+  <script src="script/ion-range.js" defer></script>
+  <script src="script/feedback.js" defer></script>
+  <script src="script/scroll.js" defer></script>
+  <script src="script/slider.js" defer></script>
+  <script src="script/steps.js" defer></script>
+  <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/ion-rangeslider/2.3.1/css/ion.rangeSlider.min.css" />
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+  <link rel="stylesheet" href="./styles/styles.css">
   <title>Dream House</title>
-  <script type="text/javascript">
-    (function (l) {
-      if (l.search[1] === '/') {
-        var decoded = l.search.slice(1).split('&').map(function (s) {
-          return s.replace(/~and~/g, '&')
-        }).join('?');
-        window.history.replaceState(null, null,
-          l.pathname.slice(0, -1) + decoded + l.hash
-        );
-      }
-    }(window.location))
-  </script>
 </head>
 
 <body>
-  <div id="root"></div>
-  <script type="module" src="/src/main.jsx"></script>
+  <header class="header">
+    <div class="header__inner container">
+      <a href="#" class="sidebar__logo logo">
+        <img src="./images/logo.svg" alt="Dream house logo" class="logo__image" width="57" height="57" loading="lazy" />
+      </a>
+      <nav class="header__menu hidden-mobile">
+
+        <ul class="header__menu-list">
+          <li class="header__menu-item">
+            <a href="#about" class="header__menu-link">About</a>
+          </li>
+          <li class="header__menu-item">
+            <a href="#statistics" class="header__menu-link">Statistics</a>
+          </li>
+          <li class="header__menu-item">
+            <a href="#gallery" class="header__menu-link">Gallery</a>
+          </li>
+          <li class="header__menu-item">
+            <a href="#pricing" class="header__menu-link">Pricing</a>
+          </li>
+          <li class="header__menu-item">
+            <a href="#steps" class="header__menu-link">Steps</a>
+          </li>
+        </ul>
+      </nav>
+      <div>
+        <a href="tel:+74953555555" class="header__button button hidden-mobile">Request for a
+          call</a>
+      </div>
+      <button class="button__burger-menu burger-button visible-mobile" type="button"
+        onclick="mobileOverlay.showModal()">
+        <span class="visually-hidden">Open navigation menu</span>
+      </button>
+    </div>
+  </header>
+
+  <dialog class="mobile-overlay visible-mobile" id="mobileOverlay">
+    <form class="mobile-overlay__close-button-wrapper" method="dialog">
+      <button class="mobile-overlay__close-button cross-button" type="submit">
+        <span class="visually-hidden">Close navigation menu</span>
+      </button>
+    </form>
+    <div class="mobile-overlay__body">
+      <ul class="mobile-overlay__list">
+        <li class="mobile-overlay__item">
+          <a href="#about" class="mobile-overlay__menu-link">About</a>
+        </li>
+        <li class="mobile-overlay__item">
+          <a href="#statistics" class="mobile-overlay__menu-link">Statistics</a>
+        </li>
+        <li class="mobile-overlay__item">
+          <a href="#gallery" class="mobile-overlay__menu-link">Gallery</a>
+        </li>
+        <li class="mobile-overlay__item">
+          <a href="#pricing" class="mobile-overlay__menu-link">Pricing</a>
+        </li>
+        <li class="mobile-overlay__item">
+          <a href="#steps" class="mobile-overlay__menu-link">Steps</a>
+        </li>
+      </ul>
+    </div>
+  </dialog>
+
+  <aside class="sidebar">
+
+    <p class="sidebar__text hidden-mobile">apartment renovation</p>
+    <div class="sidebar__decoration hidden-mobile"></div>
+    <div class="sidebar__soc1al soc1al">
+      <svg width="12" height="21" viewBox="0 0 12 21" class="soc1al__link">
+        <path
+          d="M10.6484 11.75H7.71875V20.5H3.8125V11.75H0.648438V8.11719H3.8125V5.38281C3.8125 4.34115 4.00781 3.45573 4.39844 2.72656C4.78906 1.9974 5.33594 1.45052 6.03906 1.08594C6.76823 0.695312 7.60156 0.5 8.53906 0.5C8.95573 0.5 9.39844 0.526042 9.86719 0.578125C10.3359 0.604167 10.7005 0.643229 10.9609 0.695312L11.3516 0.734375V3.82031H9.78906C9.0599 3.82031 8.52604 4.01562 8.1875 4.40625C7.875 4.77083 7.71875 5.22656 7.71875 5.77344V8.11719H11.1953L10.6484 11.75Z" />
+      </svg>
+      <svg width=" 18" height="19" viewBox="0 0 18 19" class="soc1al__link">
+        <path
+          d="M5.83594 6.33594C6.72135 5.45052 7.78906 5.00781 9.03906 5.00781C10.2891 5.00781 11.3438 5.45052 12.2031 6.33594C13.0885 7.19531 13.5312 8.25 13.5312 9.5C13.5312 10.75 13.0885 11.8177 12.2031 12.7031C11.3438 13.5625 10.2891 13.9922 9.03906 13.9922C7.78906 13.9922 6.72135 13.5625 5.83594 12.7031C4.97656 11.8177 4.54688 10.75 4.54688 9.5C4.54688 8.25 4.97656 7.19531 5.83594 6.33594ZM6.96875 11.5703C7.54167 12.1432 8.23177 12.4297 9.03906 12.4297C9.84635 12.4297 10.5365 12.1432 11.1094 11.5703C11.6823 10.9974 11.9688 10.3073 11.9688 9.5C11.9688 8.69271 11.6823 8.0026 11.1094 7.42969C10.5365 6.85677 9.84635 6.57031 9.03906 6.57031C8.23177 6.57031 7.54167 6.85677 6.96875 7.42969C6.39583 8.0026 6.10938 8.69271 6.10938 9.5C6.10938 10.3073 6.39583 10.9974 6.96875 11.5703ZM14.4297 4.10938C14.638 4.29167 14.7422 4.52604 14.7422 4.8125C14.7422 5.09896 14.638 5.34635 14.4297 5.55469C14.2474 5.76302 14.013 5.86719 13.7266 5.86719C13.4401 5.86719 13.1927 5.76302 12.9844 5.55469C12.776 5.34635 12.6719 5.09896 12.6719 4.8125C12.6719 4.52604 12.776 4.29167 12.9844 4.10938C13.1927 3.90104 13.4401 3.79688 13.7266 3.79688C14.013 3.79688 14.2474 3.90104 14.4297 4.10938ZM17.75 5.90625C17.776 6.60938 17.7891 7.80729 17.7891 9.5C17.7891 11.1927 17.776 12.3906 17.75 13.0938C17.6719 14.6823 17.1901 15.9193 16.3047 16.8047C15.4453 17.6641 14.2214 18.1198 12.6328 18.1719C11.9297 18.224 10.7318 18.25 9.03906 18.25C7.34635 18.25 6.14844 18.224 5.44531 18.1719C3.85677 18.0938 2.63281 17.625 1.77344 16.7656C1.4349 16.4531 1.16146 16.0885 0.953125 15.6719C0.744792 15.2552 0.588542 14.8516 0.484375 14.4609C0.40625 14.0703 0.367188 13.6146 0.367188 13.0938C0.315104 12.3906 0.289062 11.1927 0.289062 9.5C0.289062 7.80729 0.315104 6.59635 0.367188 5.86719C0.445312 4.30469 0.914062 3.09375 1.77344 2.23438C2.63281 1.34896 3.85677 0.867188 5.44531 0.789062C6.14844 0.763021 7.34635 0.75 9.03906 0.75C10.7318 0.75 11.9297 0.763021 12.6328 0.789062C14.2214 0.867188 15.4453 1.34896 16.3047 2.23438C17.1901 3.09375 17.6719 4.31771 17.75 5.90625ZM15.875 14.6562C15.9531 14.4479 16.0182 14.1875 16.0703 13.875C16.1224 13.5365 16.1615 13.1458 16.1875 12.7031C16.2135 12.2344 16.2266 11.8568 16.2266 11.5703C16.2266 11.2839 16.2266 10.8802 16.2266 10.3594C16.2266 9.83854 16.2266 9.55208 16.2266 9.5C16.2266 9.42188 16.2266 9.13542 16.2266 8.64062C16.2266 8.11979 16.2266 7.71615 16.2266 7.42969C16.2266 7.14323 16.2135 6.77865 16.1875 6.33594C16.1615 5.86719 16.1224 5.47656 16.0703 5.16406C16.0182 4.82552 15.9531 4.55208 15.875 4.34375C15.5625 3.53646 15.0026 2.97656 14.1953 2.66406C13.987 2.58594 13.7135 2.52083 13.375 2.46875C13.0625 2.41667 12.6719 2.3776 12.2031 2.35156C11.7604 2.32552 11.3958 2.3125 11.1094 2.3125C10.849 2.3125 10.4453 2.3125 9.89844 2.3125C9.3776 2.3125 9.09115 2.3125 9.03906 2.3125C8.98698 2.3125 8.70052 2.3125 8.17969 2.3125C7.65885 2.3125 7.25521 2.3125 6.96875 2.3125C6.68229 2.3125 6.30469 2.32552 5.83594 2.35156C5.39323 2.3776 5.0026 2.41667 4.66406 2.46875C4.35156 2.52083 4.09115 2.58594 3.88281 2.66406C3.07552 2.97656 2.51562 3.53646 2.20312 4.34375C2.125 4.55208 2.0599 4.82552 2.00781 5.16406C1.95573 5.47656 1.91667 5.86719 1.89062 6.33594C1.86458 6.77865 1.85156 7.14323 1.85156 7.42969C1.85156 7.6901 1.85156 8.09375 1.85156 8.64062C1.85156 9.16146 1.85156 9.44792 1.85156 9.5C1.85156 9.60417 1.85156 9.85156 1.85156 10.2422C1.85156 10.6068 1.85156 10.9193 1.85156 11.1797C1.85156 11.4141 1.85156 11.7266 1.85156 12.1172C1.8776 12.5078 1.90365 12.8464 1.92969 13.1328C1.95573 13.3932 1.99479 13.6667 2.04688 13.9531C2.09896 14.2396 2.15104 14.474 2.20312 14.6562C2.54167 15.4635 3.10156 16.0234 3.88281 16.3359C4.09115 16.4141 4.35156 16.4792 4.66406 16.5312C5.0026 16.5833 5.39323 16.6224 5.83594 16.6484C6.30469 16.6745 6.66927 16.6875 6.92969 16.6875C7.21615 16.6875 7.61979 16.6875 8.14062 16.6875C8.6875 16.6875 8.98698 16.6875 9.03906 16.6875C9.11719 16.6875 9.40365 16.6875 9.89844 16.6875C10.4193 16.6875 10.8229 16.6875 11.1094 16.6875C11.3958 16.6875 11.7604 16.6745 12.2031 16.6484C12.6719 16.6224 13.0625 16.5833 13.375 16.5312C13.7135 16.4792 13.987 16.4141 14.1953 16.3359C15.0026 15.9974 15.5625 15.4375 15.875 14.6562Z" />
+      </svg>
+      <svg width="18" height="15" viewBox="0 0 18 15" class="soc1al__link">
+        <path
+          d="M17.75 1.36718L15.0937 13.7891C14.8854 14.6745 14.4036 14.9088 13.6484 14.4922L9.62497 11.5234L7.67185 13.3984C7.41143 13.6588 7.13799 13.7891 6.85154 13.7891L7.16404 9.68749L14.625 2.96874C14.8073 2.78645 14.8073 2.68228 14.625 2.65624C14.4687 2.60416 14.2995 2.64322 14.1172 2.77343L4.89841 8.59374L0.914035 7.34374C0.471327 7.21353 0.262994 7.01822 0.289035 6.7578C0.315077 6.49739 0.588515 6.27603 1.10935 6.09374L16.6172 0.0781163C17.0078 -0.0520921 17.3203 -8.71718e-06 17.5547 0.234366C17.789 0.4427 17.8541 0.820304 17.75 1.36718Z" />
+      </svg>
+      <svg width="22" height="15" viewBox="0 0 22 15" class="soc1al__link">
+        <path
+          d="M21.2344 2.34375C21.3125 2.65625 21.3776 3.04688 21.4297 3.51562C21.5078 3.98438 21.5599 4.45312 21.5859 4.92188C21.612 5.36458 21.625 5.78125 21.625 6.17188C21.651 6.5625 21.6641 6.88802 21.6641 7.14844V7.5C21.6641 9.84375 21.5208 11.5755 21.2344 12.6953C21.1042 13.138 20.8698 13.5286 20.5312 13.8672C20.1927 14.2057 19.7891 14.4401 19.3203 14.5703C18.8255 14.7005 17.888 14.8047 16.5078 14.8828C15.1276 14.9349 13.8646 14.974 12.7188 15H11C6.54688 15 3.77344 14.8568 2.67969 14.5703C1.66406 14.2839 1.02604 13.6589 0.765625 12.6953C0.635417 12.2005 0.53125 11.5234 0.453125 10.6641C0.401042 9.77865 0.361979 9.03646 0.335938 8.4375V7.5C0.335938 5.18229 0.479167 3.46354 0.765625 2.34375C0.895833 1.875 1.13021 1.47135 1.46875 1.13281C1.80729 0.794271 2.21094 0.559896 2.67969 0.429688C3.17448 0.299479 4.11198 0.208333 5.49219 0.15625C6.8724 0.078125 8.13542 0.0260417 9.28125 0H11C15.4531 0 18.2266 0.143229 19.3203 0.429688C19.7891 0.559896 20.1927 0.794271 20.5312 1.13281C20.8698 1.47135 21.1042 1.875 21.2344 2.34375ZM8.8125 10.7031L14.3984 7.5L8.8125 4.33594V10.7031Z" />
+
+      </svg>
+    </div>
+  </aside>
+
+
+
+  <main class="content">
+    <section class="section section--hero" id="about">
+      <div class="section__body">
+        <div class="hero container">
+          <div class="hero__main">
+            <div class="hero__body">
+              <h1 class="hero__title hidden-mobile">
+                <span class="hero__top-title">
+                  <span class="hero__top-title-item hero__top-title-item--right" data-heading='Dream'></span>
+                  <span class="hero__top-title-item hero__top-title-item--left" data-heading='Drea'></span>
+                </span>
+                <span class="hero__center-title">
+                  <span class="hero__center-title-item" data-heading='your personal'> </span>
+                </span>
+                <span class="hero__bottom-title">
+                  <span class="hero__bottom-title-item hero__bottom-title-item--right" data-heading='House'></span>
+                  <span class="hero__bottom-title-item hero__bottom-title-item--left" data-heading='House'></span>
+                </span>
+              </h1>
+              <h1 class="hero__title visible-mobile"> Dream House </h1>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section--statistics" id="statistics">
+      <div class="section__body">
+        <div class="statistics container">
+          <div class="statistics__main">
+            <div class="statistics__body">
+              <h2 class="statistics__title">Elite renovation of your apartment</h2>
+
+              <ul class="statistics__list">
+                <li class="statistics__card">
+                  <p class="statistics__card-value">18</p>
+                  <p class="statistics__card-text">years on the market</p>
+                </li>
+                <li class="statistics__card">
+                  <p class="statistics__card-value">237</p>
+                  <p class="statistics__card-text">completed projects</p>
+                </li>
+                <li class="statistics__card">
+                  <p class="statistics__card-value">50</p>
+                  <p class="statistics__card-text">employees</p>
+                </li>
+              </ul>
+
+
+            </div>
+
+
+          </div>
+          <div class="statistics__footer">
+            <aside class="statistics__feedback-form">
+              <div class="statistics__more-info">
+                <svg width="50px" height="50px" viewBox="0 0 400 400" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="M56 270.5C56 256.429 79.5553 218.859 120.902 197.186C162.249 175.512 194.07 164.5 242.113 164.5C274.142 164.5 306.771 175.395 340 197.186"
+                    stroke="#000000" stroke-opacity="0.9" stroke-width="16" stroke-linecap="round"
+                    stroke-linejoin="round" stroke-dasharray="16 32" />
+                  <path d="M325.63 129C337.877 172.588 344 195.072 344 196.45C344 198.518 308.436 212.998 292 235"
+                    stroke="#000000" stroke-opacity="0.9" stroke-width="16" stroke-linecap="round"
+                    stroke-linejoin="round" />
+                </svg>
+                More info about us
+              </div>
+              <div id="notification" class="statistics__notification" style="display: none;"></div>
+              <form id="statistics__form" class="statistics__form">
+                <fieldset class="statistics__fieldset">
+                  <input type="email" id="email" class="statistics__input" placeholder="Your mail">
+                  <span id="errorMail" class="statistics__error-message" style="display: none;"></span>
+                </fieldset>
+
+                <fieldset class="statistics__fieldset">
+                  <input type="text" id="question" class="statistics__input" placeholder="Your question">
+                  <span id="errorText" class="statistics__error-message" style="display: none;"></span>
+                </fieldset>
+
+                <div class="statistics__button-container">
+                  <button type="submit" id="submitButton" class="statistics__button button" disabled>Discuss a
+                    project</button>
+                </div>
+              </form>
+            </aside>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section--gallery" id="gallery">
+      <div class="section__body">
+        <div class="gallery">
+          <div class="gallery__main">
+            <div class="gallery__body">
+              <ul class="gallery__list">
+                <li class="gallery__item" data-slide="elite">
+                  <span onclick="openModal('elite')">elite</span>
+                </li>
+                <li class="gallery__item" data-slide="vip">
+                  <span onclick="openModal('vip')">vip</span>
+                </li>
+                <li class="gallery__item" data-slide="extra">
+                  <span onclick="openModal('extra')">extra</span>
+                </li>
+              </ul>
+
+              <!-- Модальное окно -->
+              <dialog id="slideModal" class="mobile-overlay slide-modal">
+                <form class="mobile-overlay__close-button-wrapper" method="dialog">
+                  <button class="mobile-overlay__close-button cross-button" type="submit">
+                    <span class="visually-hidden">Close navigation menu</span>
+                  </button>
+                </form>
+                <div class="mobile-overlay__body">
+                  <div class="mobile-overlay__swiper swiper">
+                    <div class="swiper-wrapper">
+                      <!-- Слайды будут добавлены динамически -->
+                    </div>
+                    <div class="swiper-pagination"></div>
+
+                    <div class="swiper-scrollbar"></div>
+                  </div>
+                </div>
+              </dialog>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section--pricing" id="pricing">
+      <div class="section__body">
+        <div class="pricing container">
+          <form class="pricing__form form" id="form">
+            <h2 class="pricing__form-title">Select an area size & one of the service packages</h2>
+            <div class="pricing__form-content">
+              <div class="pricing__group-wrapper">
+                <div class="pricing__size-wrapper">
+                  <div class="pricing__range-wrapper">
+                    <span class="pricing__size-number">30&nbsp;м</span>
+                    <div class="pricing__range">
+                      <input id="demo_0" type="text" class="irs-hidden-input" tabindex="-1" readonly="">
+                    </div>
+                    <span class="pricing__size-number">150&nbsp;м</span>
+                  </div>
+                </div>
+
+                <div class="pricing__functions-wrapper">
+                  <span class="pricing__group-title">Select view</span>
+                  <div class="pricing__radio-wrapper">
+                    <label class="pricing__label radio-js">
+
+                      <input type="radio" id="check1" class="pricing__radio" name="service" checked>
+                      <span class="pricing__custom-radio"></span><span class="pricing__radio-text">Elite</span>
+                    </label>
+                    <label class="pricing__label radio-js">
+
+                      <input type="radio" id="check2" class="pricing__radio" name="service">
+                      <span class="pricing__custom-radio"></span><span class="pricing__radio-text">Vip</span>
+                    </label>
+                    <label class="pricing__label radio-js">
+
+                      <input type="radio" id="check3" class="pricing__radio" name="service">
+                      <span class="pricing__custom-radio"></span><span class="pricing__radio-text">Extra</span>
+                    </label>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="pricing__bottom-wrapper">
+              <div class="pricing__square-wrapper">
+                <span class="pricing__group-title">Square</span>
+                <output for="demo_0" id="length" name="length" class="pricing__output"></output>
+              </div>
+
+              <div class="pricing__view-wrapper">
+                <span class="pricing__group-title">View</span>
+                <output for="demo_0" id="view" name="view" class="pricing__output">Elite</output>
+              </div>
+
+              <div class="pricing__price-wrapper">
+                <span class="pricing__group-title">Price</span>
+                <output for="demo_0" id="price" name="price" class="pricing__output"></output>
+              </div>
+              <a href="#" class="pricing__button button button--bordered">To call</a>
+            </div>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section--steps" id="steps">
+      <div class="section__body">
+        <div class="steps container">
+          <div class="steps__main">
+            <div class="steps__body">
+              <h2 class="steps__title">6 steps to your dream house:</h2>
+              <div class="steps__data grid grid--2">
+                <circle-progress value="1" max="6" class="steps__progress"></circle-progress>
+                <div class="steps__info">
+                  <div class="steps__container" id="stepsContainer"></div>
+                  <div class="steps__transition">
+                    <svg height="31px" width="24px" class="steps__transition-button" version="1.1" id="nextButton"
+                      xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                      viewBox="0 0 512 512" xml:space="preserve">
+                      <g>
+                        <g>
+                          <path d="M256,0C114.859,0,0,114.837,0,256c0,141.141,114.859,256,256,256c141.163,0,256-114.859,256-256
+			C512,114.837,397.163,0,256,0z M403.691,264.149c-1.088,2.603-2.645,4.971-4.608,6.933l-85.333,85.333
+			c-4.16,4.16-9.621,6.251-15.083,6.251c-5.461,0-10.901-2.091-15.083-6.251c-8.32-8.341-8.32-21.845,0-30.165l48.917-48.917H128
+			c-11.776,0-21.333-9.557-21.333-21.333c0-11.797,9.557-21.333,21.333-21.333h204.501l-48.917-48.917
+			c-8.32-8.341-8.32-21.845,0-30.165c8.341-8.341,21.845-8.341,30.165,0l85.333,85.312c1.963,1.963,3.52,4.331,4.608,6.955
+			C405.845,253.056,405.845,258.923,403.691,264.149z" />
+                        </g>
+                      </g>
+                    </svg>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+  <div class="dots"></div>
+
+
+
+  <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/ScrollTrigger.min.js"></script>
+  <script>
+
+    gsap.registerPlugin(ScrollTrigger);
+
+    const sections = document.querySelectorAll('.section');
+
+    sections.forEach(section => {
+      gsap.from(section, {
+        scrollTrigger: {
+          trigger: section,
+          start: 'top bottom',
+          end: 'top top',
+          toggleActions: 'play none none reverse',
+        },
+        opacity: 0,
+        y: 150,
+        duration: 1.5,
+      });
+    });
+  </script> -->
 </body>
 
 </html>

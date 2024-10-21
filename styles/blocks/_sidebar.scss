@@ -1,0 +1,40 @@
+.sidebar {
+  position: fixed;
+  z-index: 12;
+  padding: 10px;
+  width: 50px;
+  top: 78px;
+  height: calc(100svh - 78px);
+  backdrop-filter: blur(5px);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  color: var(--color-gray-alt);
+
+  @include mobile {
+    backdrop-filter: blur(0);
+    justify-content: flex-end;
+  }
+
+  &__text {
+    font-family: var(--font-family-secondary);
+    text-transform: uppercase;
+    letter-spacing: 0.69em;
+    font-size: 12px;
+    writing-mode: vertical-rl;
+    transform: rotate(180deg);
+  }
+  &__decoration {
+    width: 1px;
+    height: 10%;
+    background: var(--color-gray-alt);
+    margin: 10px 0;
+  }
+  &__soc1al {
+    display: flex;
+    flex-direction: column;
+    row-gap: 20px;
+    align-items: center;
+  }
+}
