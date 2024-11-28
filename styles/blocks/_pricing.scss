@@ -7,9 +7,11 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  gap: 120px;
-
   z-index: 5;
+
+  @include mobile {
+    padding-bottom: 0;
+  }
 
   &__form {
     backdrop-filter: blur(3px);
@@ -25,7 +27,7 @@
     }
 
     &-title {
-      @include fluid-text(20, 18);
+      @include fluid-text(20, 16);
       font-family: var(--font-family-secondary);
       font-weight: 700;
       text-align: center;

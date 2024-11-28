@@ -25,6 +25,9 @@
     background: url('../../images/secondary.jpg') no-repeat;
     background-size: cover;
     background-position: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
     &::before {
       content: '';
       position: absolute;
@@ -42,6 +45,9 @@
     background: url('../../images/third.jpg') no-repeat;
     background-size: cover;
     background-position: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
     &::before {
       content: '';
       position: absolute;

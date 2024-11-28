@@ -7,8 +7,6 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  gap: 120px;
-
   z-index: 5;
 
   &__body {
@@ -33,10 +31,8 @@
 
   &__list {
     display: flex;
-
-    @include tablet {
-      flex-direction: column;
-    }
+    flex-wrap: wrap;
+    justify-content: center;
   }
 
   &__card {
@@ -44,33 +40,29 @@
     flex-direction: column;
     align-items: center;
     text-align: center;
-    padding: 0 25px;
-    max-width: 334px;
+    gap: 10px;
+    // max-width: 334px;
+    width: 300px;
 
-    @include tablet {
-      padding: 25px 0;
-    }
-
-    &:nth-child(2) {
-      border-left: 1px solid #ffffff;
-      border-right: 1px solid #ffffff;
-
-      @include tablet {
-        border: none;
-        border-top: 1px solid #ffffff;
-        border-bottom: 1px solid #ffffff;
-      }
+    @include mobile {
+      width: 200px;
     }
 
     &-value {
-      @include fluid-text(64, 45);
-
+      @include fluid-text(64, 25);
       line-height: 70px;
-
       margin-bottom: 18px;
+
+      @include tablet {
+        line-height: 40px;
+      }
+      @include mobile {
+        margin-bottom: 8px;
+        line-height: 20px;
+      }
     }
     &-text {
-      @include fluid-text(30, 20);
+      @include fluid-text(30, 16);
 
       font-weight: 400;
       font-family: var(--font-family-secondary);
